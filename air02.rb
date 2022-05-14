@@ -4,16 +4,19 @@
 # Ma fonction
 def only_string(array_sting, separateur)
     only_str = ""
-    str = array_sting[0...array_sting.length - 1]
-    str.each { |i| only_str << i + separateur }
+    array_sting.each { |i| only_str << i + separateur }
     return only_str.capitalize
 end
 
 # Gestion d'erreur
 (puts "error"; exit) if ARGV.size < 2
 
+# Parsing
+array = ARGV
+sep = ARGV.pop
+
 # Résolution
-concat = only_string(ARGV, " ")
+concat = only_string(array, sep)
 
 # Affichage
 puts concat
