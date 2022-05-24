@@ -3,7 +3,7 @@
 # Ma fonction
 def supprime_element(array_string, string)
     liste_delete = []
-    array_string.each { |mot| if !mot.include?(string) ; liste_delete << mot end }
+    array_string.each { |mot| if !mot.downcase.include?(string) ; liste_delete << mot end }
     liste_delete.each { |mot| array_string.delete(mot) }
     return liste_delete.join(", ")
 end

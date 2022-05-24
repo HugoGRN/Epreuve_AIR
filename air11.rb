@@ -5,7 +5,7 @@ def escalier(symbole, etage)
     1.upto(etage) { |i|
         espace = " " * (etage-i)
         pyramide = symbole * (i*2 - 1)
-        puts espace + pyramide }
+        p espace + pyramide }
 end
 
 # Gestion erreur
@@ -16,4 +16,4 @@ symbole = ARGV[0]
 etage = ARGV[1].to_i
 
 # Resolution / Affichage
-afficher_pyramide = escalier(symbole, etage)
+afficher_pyramide = p escalier(symbole, etage)
